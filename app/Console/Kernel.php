@@ -18,7 +18,6 @@ class Kernel extends ConsoleKernel
         // $schedule->command('inspire')->hourly();
         $schedule->call(function () {
             $data = randNumbs::all();
-
             $handle = fopen('export.csv', 'w');
 
             foreach ($data as $row) {

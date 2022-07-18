@@ -33,7 +33,7 @@ Route::get('/numbers/{id}', function (Request $request, $id) {
             'message' => 'Something went wrong. Contact API support',
         ], 500);
     }
-});
+})->middleware('basicAuth');
 
 Route::post('/numbers', function (Request $request) {
     try {
@@ -50,4 +50,4 @@ Route::post('/numbers', function (Request $request) {
             'message' => 'Something went wrong. Contact API support',
         ], 500);
     }
-});
+})->middleware('basicAuth');

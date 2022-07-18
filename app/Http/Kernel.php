@@ -39,5 +39,7 @@ class Kernel extends HttpKernel
      *
      * @var array<string, class-string|string>
      */
-    protected $routeMiddleware = [];
+    protected $routeMiddleware = [
+        'basicAuth' => \App\Http\Middleware\BasicAuth::class,
+    ];
 }
